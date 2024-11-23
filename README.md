@@ -45,9 +45,6 @@ mkdir -p backend/files backend/uploads
 docker compose up --build
 ```
 
-The application will be available at:
-- Frontend: http://localhost:3000
-
 ## Manual Setup (Development)
 
 ### Backend Setup
