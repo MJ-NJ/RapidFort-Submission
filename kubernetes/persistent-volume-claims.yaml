@@ -1,0 +1,30 @@
+# PVC for uploads directory
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pdf-converter-uploads-pvc
+  labels:
+    app: pdf-converter
+spec:
+  accessModes:
+    - ReadWriteMany  
+  resources:
+    requests:
+      storage: 1Gi     
+  storageClassName: standard  
+
+---
+# PVC for files directory
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pdf-converter-files-pvc
+  labels:
+    app: pdf-converter
+spec:
+  accessModes:
+    - ReadWriteMany 
+  resources:
+    requests:
+      storage: 1Gi   
+  storageClassName: standard  
